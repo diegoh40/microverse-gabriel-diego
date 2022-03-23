@@ -1,0 +1,174 @@
+:root {
+  --dark-color: #333;
+  --light-color: #f4f4f4;
+  --primary-color: rgb(243, 243, 129);
+}
+
+/* Resetting */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Setting the value of 1rem */
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+/* Large screens */
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 56.25%; 
+  } 
+}
+
+/* Medium screens */
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 52.25%; 
+  } 
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  } 
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.6;
+  max-width: 100rem;
+}
+
+code {
+  display: block;
+  background: #eeffcc;
+  padding: 2rem;
+  max-width: 100rem;
+  width: 100%;
+
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  
+  background-color: var(--primary-color);
+  padding: 2rem 0;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+}
+
+.navbar > div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar .title {
+  padding: 3rem;
+}
+
+.navbar .nav-link {
+  padding: 2rem;
+
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.navbar .nav-link:hover {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.title {
+  padding: 1rem 0;
+  border-bottom: 3px solid var(--dark-color);
+}
+
+.main-content {
+  padding: 3rem 2rem;
+  margin-left: 35rem;
+}
+
+.main-section {
+  padding: 0 0 3rem;
+  margin-top: 2rem;
+}
+
+.main-section:not(:last-child) {
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.main-section h3 {
+  margin-bottom: 2rem;
+}
+
+.main-section ul {
+  margin-top: 3rem;
+}
+
+.main-section code {
+  margin: 2rem 0;
+}
+
+/* Medium screens */
+@media only screen and (max-width: 900px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar > div {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar .nav-link {  
+    padding: 5rem 2rem;
+    border: none;
+  }
+
+  .title {
+    border: none;
+  }
+
+  .main-content {
+    margin: 15rem 0 0;
+  }
+}
+
+
+
+

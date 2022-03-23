@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <title>Fork Me! FCC: Test Suite Template</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,80 +26,190 @@
 
     -->
   <script src="js/index.js"></script>
-  <main id="main-doc">
-    <nav id="navbar">
-
+  <main id="main-doc" class="main-doc">
+    <nav id="navbar" class="navbar">
       <header>
-                <h1>Python Documentation</h1>
+        <h1 class="title">Python Documentation</h1>
       </header>
       <div>
-      <a href="" class="nav-link">Introduction</a>
-      <a href="" class="nav-link">Hello World</a>
-      <a href="" class="nav-link">Variables</a>
-      <a href="" class="nav-link">Data types</a>
-      <a href="" class="nav-link">Functions</a>
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#control_flow" class="nav-link">Control Flow</a>
+        <a href="#variables" class="nav-link">Variables</a>
+        <a href="#data_structures" class="nav-link">Data Sctructures</a>
+        <a href="#functions" class="nav-link">Functions</a>
+      </div>
+    </nav>
+    <div class="main-content">
+      <section id="introduction" class="main-section">
+        <header>
+          <h3>Introduction</h3>
+          <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and
+            a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing,
+            together with its interpreted nature, make it an ideal language for scripting and rapid application
+            development in many areas on most platforms.</p>
+          <p>The Python interpreter and the extensive standard library are freely available in source or binary form for
+            all major platforms from the Python web site, https://www.python.org/, and may be freely distributed. The
+            same site also contains distributions of and pointers to many free third party Python modules, programs and
+            tools, and additional documentation.</p>
+          <!-- <ul>
+            <li></li>
+            <li></li>
+          </ul> -->
+        </header>
+      </section>
+      <section id="control_flow" class="main-section">
+        <header>
+          <h3>Control Flow</h3>
+          <p>Python uses the usual flow control statements known from other languages, with some twists.</p>
+          <ul>
+            <li>
+              <h3>If Statements</h3>
+              <p>Perhaps the most well-known statement type is the if statement. For example:</p>
+              <code>
+                >>> x = int(input("Please enter an integer: "))
+                Please enter an integer: 42
+                >>> if x < 0:
+                ...     x = 0
+                ...     print('Negative changed to zero')
+                ... elif x == 0:
+                ...     print('Zero')
+                ... elif x == 1:
+                ...     print('Single')
+                ... else:
+                ...     print('More')
+              </code>
+            </li>
+            <li>
+              <h3>For Statements</h3>
+              <p>The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than
+                always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the
+                ability to define both the iteration step and halting condition (as C), Python’s for statement iterates
+                over the items of any sequence (a list or a string), in the order that they appear in the sequence. For
+                example (no pun intended):</p>
+              <code>
+                >>> # Measure some strings:
+                ... words = ['cat', 'window', 'defenestrate']
+                >>> for w in words:
+                ...     print(w, len(w))
+                ...
+              </code>
+            </li>
+          </ul>
+        </header>
+      </section>
+      <section id="variables" class="main-section">
+        <header>
+          <h3>Variables</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <ul>
+            <li>
+              <h3>Lorem ipsum dolor.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloribus quasi quaerat, perspiciatis
+                excepturi delectus dolor illo ut explicabo beatae.</p>
+
+              <code>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, doloremque eius hic minus veniam, sed fuga quod similique laudantium illo quam, harum totam dolores itaque numquam sit laboriosam ipsum minima illum ad et ex nisi adipisci. Nulla, iste impedit. Corrupti adipisci enim quasi maxime. Minus quaerat deleniti sequi totam consequuntur?
+              </code>
+            </li>
+            <li>
+              <h3>Lorem ipsum dolor.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloribus quasi quaerat, perspiciatis
+                excepturi delectus dolor illo ut explicabo beatae.</p>
+
+              <code>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, doloremque eius hic minus veniam, sed fuga quod similique laudantium illo quam, harum totam dolores itaque numquam sit laboriosam ipsum minima illum ad et ex nisi adipisci. Nulla, iste impedit. Corrupti adipisci enim quasi maxime. Minus quaerat deleniti sequi totam consequuntur?
+              </code>
+            </li>
+          </ul>
+        </header>
+      </section>
+      <section id="data_structures" class="main-section">
+        <header>
+          <h3>Data Structures</h3>
+          <p>This section describes some data structures in python.</p>
+          <ul>
+            <li>
+              <h3>Lists</h3>
+              <p>The list data type has some more methods. Here are some of the methods of list objects:</p>
+              <p>list.count(x)</p>
+              <code>
+                >>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+                >>> fruits.count('apple')
+                2
+              </code>
+
+              <p>list.reverse()</p>
+              <code>
+                >>> fruits.reverse()
+                >>> fruits.count('apple')
+                >>> fruits
+                ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
+              </code>
+            </li>
+            <li>
+              <h3>Sets</h3>
+              <p>Python also includes a data type for sets. A set is an unordered collection with no duplicate elements.
+                Basic uses include membership testing and eliminating duplicate entries. Set objects also support
+                mathematical operations like union, intersection, difference, and symmetric difference.</p>
+              <p>Here is a brief demonstration:</p>
+              <code>
+                >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+                >>> print(basket)                      # show that duplicates have been removed
+                {'orange', 'banana', 'pear', 'apple'}
+                >>> 'orange' in basket                 # fast membership testing
+                True
+                >>> 'crabgrass' in basket
+                False
+
+                >>> # Demonstrate set operations on unique letters from two words
+                ...
+                >>> a = set('abracadabra')
+                >>> b = set('alacazam')
+                >>> a                                  # unique letters in a
+                {'a', 'r', 'b', 'c', 'd'}
+                >>> a - b                              # letters in a but not in b
+                {'r', 'd', 'b'}
+                >>> a | b                              # letters in a or b or both
+                {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+                >>> a & b                              # letters in both a and b
+                {'a', 'c'}
+                >>> a ^ b                              # letters in a or b but not both
+                {'r', 'd', 'b', 'm', 'z', 'l'}
+              </code>
+            </li>
+          </ul>
+        </header>
+      </section>
+      <section id="functions" class="main-section">
+        <header>
+          <h3>Functions</h3>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <ul>
+            <li>
+              <h3>Lorem ipsum dolor.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloribus quasi quaerat, perspiciatis
+                excepturi delectus dolor illo ut explicabo beatae.</p>
+
+              <code>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, doloremque eius hic minus veniam, sed fuga quod similique laudantium illo quam, harum totam dolores itaque numquam sit laboriosam ipsum minima illum ad et ex nisi adipisci. Nulla, iste impedit. Corrupti adipisci enim quasi maxime. Minus quaerat deleniti sequi totam consequuntur?
+              </code>
+            </li>
+            <li>
+              <h3>Lorem ipsum dolor.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloribus quasi quaerat, perspiciatis
+                excepturi delectus dolor illo ut explicabo beatae.</p>
+
+              <code>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, doloremque eius hic minus veniam, sed fuga quod similique laudantium illo quam, harum totam dolores itaque numquam sit laboriosam ipsum minima illum ad et ex nisi adipisci. Nulla, iste impedit. Corrupti adipisci enim quasi maxime. Minus quaerat deleniti sequi totam consequuntur?
+              </code>
+            </li>
+          </ul>
+        </header>
+      </section>
     </div>
 
-    </nav>
-    <section id="introduction" class="main-section">
-      <header>
-        <h3>Introduction</h3>
-        <code></code>
-        <p></p>
-        <p></p>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </header>
-    </section>
-    <section id="hello_world" class="main-section">
-      <header>
-        <h3>Hello World</h3>
-        <code></code>
-        <p></p>
-        <p></p>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </header>
-    </section>
-    <section id="variables" class="main-section">
-      <header>
-        <h3>Variables</h3>
-        <code></code>
-        <p></p>
-        <p></p>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </header>
-    </section>
-    <section id="data_types" class="main-section">
-      <header>
-        <h3>Data types</h3>
-        <code></code>
-        <p></p>
-        <p></p>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </header>
-    </section>
-    <section id="functions" class="main-section">
-      <header>
-        <h3>Functions</h3>
-        <code></code>
-        <p></p>
-        <p></p>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </header>
-    </section>
 
   </main>
+</body>
+
+</html>
